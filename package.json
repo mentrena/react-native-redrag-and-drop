@@ -34,7 +34,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "reanimated",
+    "drag",
+    "drop",
+    "gesture"
   ],
   "repository": "https://github.com/mentrena/react-native-redrag-and-drop",
   "author": "Manuel Entrena <manuel@mentrena.com> (https://github.com/mentrena)",
@@ -64,12 +68,16 @@
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-builder-bob": "^0.17.1",
+    "react-native-gesture-handler": "^1.10.2",
+    "react-native-reanimated": "2.0.0-rc.0",
     "release-it": "^14.2.2",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "^2.0.0-rc.0"
   },
   "jest": {
     "preset": "react-native",
