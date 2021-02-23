@@ -10,13 +10,6 @@ npm install react-native-redrag-and-drop
 
 ## Usage
 
-```js
-import RedragAndDrop from "react-native-redrag-and-drop";
-
-// ...
-
-const result = await RedragAndDrop.multiply(3, 7);
-```
 
 ## Contributing
 
