@@ -79,6 +79,10 @@ Props | Description
 --------|--------
 id: string | The id of this view.
 
+### Sample
+
+![](https://github.com/mentrena/react-native-redrag-and-drop/blob/main/redragdrop.gif)
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
