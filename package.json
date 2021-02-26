@@ -1,6 +1,6 @@
 {
   "name": "react-native-redrag-and-drop",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Drag and Drop using Reanimated v2",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
