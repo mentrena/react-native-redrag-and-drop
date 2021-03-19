@@ -57,7 +57,7 @@ Props | Description
 -------|------
 dragDidStart?: (dragId: string) => void | This will be called when a drag starts happening, and you will get the id of the view being dragged.
 validDropIds?: (dragId: string) => string[] | Implement this to return a list of valid drop views for a given drag view. If a function is not provided, the default behavior will be to allow a drop for all drop views except the one currently containing the drag view, if any.
-dragDidMove?: (position: LayoutRectangle) => void | You can provide a worklet to be called during the animation, in case you want to animate some other view concurrently. The position will be in the coordinates of the container. The funciont _must_ be a worklet.
+dragDidMove?: (position: LayoutRectangle) => void | You can provide a worklet to be called during the animation, in case you want to animate some other view concurrently. The position will be in the coordinate system of the container. The function _must_ be a worklet.
 onDropHover?: (dropId: string \| undefined) => void | It will be called when a drag view enters the bounds of a drop view.
 onDrop?: (dragId: string, dropId: string) => void | Called when a drag view is dropped inside a drop view. You get both ids and can perform your state-changing actions here.
 
