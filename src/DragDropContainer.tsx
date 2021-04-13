@@ -190,23 +190,25 @@ const DragDropContainer: FunctionComponent<DragDropContainerProps> = ({
   }));
 
   return (
-    <GestureHandlerRootView ref={containerRef} style={style}>
-      <DragDropContext.Provider
-        value={{
-          registerDropView,
-          didStartDrag,
-          gestureHandler,
-        }}
-      >
-        {children}
-        <Animated.View
-          style={[styles.dragView, animatedStyle]}
-          pointerEvents="none"
+    <View ref={containerRef} style={style}>
+      <GestureHandlerRootView style={styles.gestureRootView}>
+        <DragDropContext.Provider
+          value={{
+            registerDropView,
+            didStartDrag,
+            gestureHandler,
+          }}
         >
-          {draggingChildren ? draggingChildren : null}
-        </Animated.View>
-      </DragDropContext.Provider>
-    </GestureHandlerRootView>
+          {children}
+          <Animated.View
+            style={[styles.dragView, animatedStyle]}
+            pointerEvents="none"
+          >
+            {draggingChildren ? draggingChildren : null}
+          </Animated.View>
+        </DragDropContext.Provider>
+      </GestureHandlerRootView>
+    </View>
   );
 };
 
@@ -216,6 +218,9 @@ const styles = StyleSheet.create({
     left: 0,
     top: 0,
     zIndex: 100,
+  },
+  gestureRootView: {
+    flex: 1,
   },
 });
 

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext, useRef } from 'react';
-import type { LayoutRectangle, ViewProps } from 'react-native';
+import type { LayoutRectangle, View, ViewProps } from 'react-native';
 import { PanGestureHandler } from 'react-native-gesture-handler';
 import Animated, {
   runOnJS,
@@ -46,9 +46,9 @@ const DragView: FunctionComponent<DragViewProps> = ({
   const measurePosition = (
     measuredPosition: (pos: LayoutRectangle) => void
   ) => {
-    const node = ref.current!.getNode();
-    if (node) {
-      node.measureInWindow((x, y, width, height) => {
+    if (ref.current) {
+      const view = (ref.current as unknown) as View;
+      view.measureInWindow((x, y, width, height) => {
         measuredPosition({ x, y, width, height });
       });
     }
