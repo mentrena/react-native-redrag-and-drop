@@ -39,7 +39,7 @@ const DropView: FunctionComponent<DropViewProps> = ({
   }, [id, dragDidEnter, dragDidLeave, measurePosition, registerDropView]);
 
   return (
-    <View ref={ref} style={style}>
+    <View ref={ref} style={style} collapsable={false}>
       <DropContext.Provider value={{ dropId: id }}>
         {children}
       </DropContext.Provider>

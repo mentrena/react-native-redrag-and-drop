@@ -190,7 +190,7 @@ const DragDropContainer: FunctionComponent<DragDropContainerProps> = ({
   }));
 
   return (
-    <View ref={containerRef} style={style}>
+    <View ref={containerRef} style={style} collapsable={false}>
       <GestureHandlerRootView style={styles.gestureRootView}>
         <DragDropContext.Provider
           value={{
